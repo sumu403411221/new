@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+		 <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1 id ="start"><span id="starting">HODLINFO</span><span class="end">.com</span></h1>
+			<h3 id="powered">Powered by <span id="temp">Finstreet</span></h3>
+			<div id = "mid">
+				<div class="hii">INR <i class="fas fa-caret-down"></i></div>
+				<div class="hii">BTC <i class="fas fa-caret-down"></i></div>
+			</div>
+			<i class="fal fa-toggle-on"></i>
+			<div class ="switch"><i class="fal fa-toggle-on"></i></div>	
+			<div id="telegram"><i class="fab fa-telegram-plane"></i> CONTACT TELEGRAM</div>
+			<div class="circle">58</div>
+			<table class="table" style="width:100%">
+				<tr class ="row">
+					<th>#</th>
+					<th>name</th>
+					<th>Last</th>
+					<th>Buy / Sell Price</th>
+					<th>volume</th>
+					<th>base_unit</th>
+				</tr>
+				<% for(var i=0;i<10;i++){ %>
+					<tr class="details">
+						<td><%= data[i].id %></td>
+						<td><%= data[i].name1 %></td>
+						<td><i class="fas fa-rupee-sign"></i> <%= data[i].last1 %></td>
+						<td><i class="fas fa-rupee-sign"></i><%= data[i].buy %> / <i class="fas fa-rupee-sign"></i> <%=data[i].sell%></td>
+						<td><%= data[i].volume %></td>
+						<td><%= data[i].base_unit %></td>
+						
+					</tr>	
+				<% } %>
+			</table>
+		</div>
+	</body>
+</html>
+
+
